@@ -1,8 +1,11 @@
+import { MananDhariaProfile, MananSoniProfile, DhrumitProfile, CPProfile } from './../assets/indexImg'
+
 const teamData = [
     {
         name: "Dhrumit Patel",
         role: "Team Captain",
         data: "",
+        profile:DhrumitProfile,
         social: {
             insta: "https://instagram.com/dhrumitpat3l?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/badboy6teen",
@@ -14,6 +17,7 @@ const teamData = [
         name: "Manan Soni",
         role: "Co-Leader",
         data: "",
+        profile:MananSoniProfile,
         social: {
             insta: "https://www.instagram.com/nansomani/",
             github: "https://github.com/Manan-Soni",
@@ -25,6 +29,7 @@ const teamData = [
         name: "Chandraprakash Darji",
         role: "Front-end Dev",
         data: "",
+        profile:CPProfile,
         social: {
             insta: "https://instagram.com/chandraprakash_7852?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/Chandraprakash-Darji",
@@ -34,8 +39,9 @@ const teamData = [
     },
     {
         name: "Manan Dharia",
-        role: "Member",
+        role: "Resource Investigator",
         data: "",
+        profile:MananDhariaProfile,
         social: {
             insta: "https://instagram.com/manan_dharia?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/manandharia07",

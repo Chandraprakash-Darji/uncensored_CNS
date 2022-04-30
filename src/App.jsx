@@ -1,17 +1,13 @@
-import AboutUS from './Componets/AboutUS';
-import NavBar from './Componets/Navbar'
-import MainSection from './Componets/mainSection'
-import LogoutButton from './Componets/Logoout'
-import SearchUser from './Componets/SearchUser';
+import AboutUS from "./Componets/AboutUS";
+import NavBar from "./Componets/Navbar";
+import ProfileSection from "./Componets/ProfileSection";
 function App() {
   return (
-    <>
+    <div className="gradient-bg-welcome pt-24">
       <NavBar />
-      <SearchUser/>
-      {/* <MainSection /> */}
+      <ProfileSection />
       <AboutUS />
-      {/* <LogoutButton /> */}
-    </>
+    </div>
   );
 }
 

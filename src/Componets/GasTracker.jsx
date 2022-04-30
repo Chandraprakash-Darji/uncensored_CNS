@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const MainSection = () => {
+const GasTracker = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [gas, setGas] = useState(null);
@@ -25,19 +25,19 @@ const MainSection = () => {
 
   if (error) {
     return (
-      <div className="gradient-bg-transactions min-h-[40rem] text-white flex flex-col text-3xl justify-center items-center">
+      <div className="min-h-[40rem] text-white flex flex-col text-3xl justify-center items-center">
         Error: {error.message}
       </div>
     );
   } else if (!isLoaded) {
     return (
-      <div className="gradient-bg-transactions min-h-[40rem] text-white flex flex-col text-3xl justify-center items-center">
+      <div className="min-h-[40rem] text-white flex flex-col text-3xl justify-center items-center">
         Loading...
       </div>
     );
   } else {
     return (
-      <div className="gradient-bg-transactions min-h-[40rem] text-white flex flex-col  justify-center items-center">
+      <div className="min-h-[40rem] text-white flex flex-col  justify-center items-center">
         <h2 className="py-2 text-5xl uppercase font-bold mt-10">
           polygon Gas tracker
         </h2>
@@ -63,7 +63,7 @@ const MainSection = () => {
   }
 };
 
-export default MainSection;
+export default GasTracker;
 
 const CardGas = ({ title, price, textColor }) => {
   return (

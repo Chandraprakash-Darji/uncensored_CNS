@@ -1,5 +1,4 @@
 import React from "react";
-import { profilePic } from "../assests/indexImg";
 import teamData from "./../handle/teamData";
 import {
   AiOutlineInstagram,
@@ -9,7 +8,7 @@ import {
 } from "react-icons/ai";
 const AboutUS = () => {
   return (
-    <section className="text-white  gradient-bg-welcome flex flex-col items-center py-10">
+    <section className="text-white mt-20 flex flex-col items-center py-10">
       <h2 className="py-2 text-5xl uppercase font-bold ">Meet Our Team</h2>
       <p className="font-light italic ">Who are we?</p>
       <div className="flex gap-x-5 gap-y-28 mt-36 flex-wrap justify-center">
@@ -19,7 +18,11 @@ const AboutUS = () => {
             key={memData.social.github + i}
           >
             <div className="w-40 absolute -top-1/2 rounded-full overflow-hidden">
-              <img src={profilePic} alt="" className="object-cover w-40 " />
+              <img
+                src={memData.profile}
+                alt=""
+                className="object-cover w-40 "
+              />
             </div>
             <h3 className="font-bold text-xl ">{memData.name}</h3>
             <p>{memData.role}</p>
