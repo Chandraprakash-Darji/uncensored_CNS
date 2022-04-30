@@ -1,30 +1,35 @@
+import { MananDhariaProfile, MananSoniProfile, DhrumitProfile, CPProfile } from './../assets/indexImg'
+
 const teamData = [
     {
         name: "Dhrumit Patel",
         role: "Team Captain",
-        data: "Blockchain Enthusiast",
+        data: "",
+        profile:DhrumitProfile,
         social: {
             insta: "https://instagram.com/dhrumitpat3l?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/badboy6teen",
-            linkedIn: "https://www.linkedin.com/in/dhrumit-patel-27a705237",
+            linkedIn: "",
             twitter: "https://twitter.com/dhrumitpat3l?t=SXFW0wuaf2IaREdYe0j0_w&s=08"
         }
     },
     {
         name: "Manan Soni",
         role: "Co-Leader",
-        data: "Musician | Gamer | Developer",
+        data: "",
+        profile:MananSoniProfile,
         social: {
             insta: "https://www.instagram.com/nansomani/",
             github: "https://github.com/Manan-Soni",
             linkedIn: "https://www.linkedin.com/in/manan-soni-2b4495217",
-            twitter: "https://twitter.com/MananSoni01"
+            twitter: ""
         }
     },
     {
         name: "Chandraprakash Darji",
         role: "Front-end Dev",
-        data: "Front-End Learner from India. Like to Play with CSS. Currently Mastering JavaScript",
+        data: "",
+        profile:CPProfile,
         social: {
             insta: "https://instagram.com/chandraprakash_7852?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/Chandraprakash-Darji",
@@ -34,8 +39,9 @@ const teamData = [
     },
     {
         name: "Manan Dharia",
-        role: "Management",
-        data: "Developer | Software Analyst",
+        role: "Resource Investigator",
+        data: "",
+        profile:MananDhariaProfile,
         social: {
             insta: "https://instagram.com/manan_dharia?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/manandharia07",
