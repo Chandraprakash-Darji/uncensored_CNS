@@ -2,29 +2,29 @@ const teamData = [
     {
         name: "Dhrumit Patel",
         role: "Team Captain",
-        data: "",
+        data: "Blockchain Enthusiast",
         social: {
             insta: "https://instagram.com/dhrumitpat3l?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/badboy6teen",
-            linkedIn: "",
+            linkedIn: "https://www.linkedin.com/in/dhrumit-patel-27a705237",
             twitter: "https://twitter.com/dhrumitpat3l?t=SXFW0wuaf2IaREdYe0j0_w&s=08"
         }
     },
     {
         name: "Manan Soni",
         role: "Co-Leader",
-        data: "",
+        data: "Musician | Gamer | Developer",
         social: {
             insta: "https://www.instagram.com/nansomani/",
             github: "https://github.com/Manan-Soni",
             linkedIn: "https://www.linkedin.com/in/manan-soni-2b4495217",
-            twitter: ""
+            twitter: "https://twitter.com/MananSoni01"
         }
     },
     {
         name: "Chandraprakash Darji",
         role: "Front-end Dev",
-        data: "",
+        data: "Front-End Learner from India. Like to Play with CSS. Currently Mastering JavaScript",
         social: {
             insta: "https://instagram.com/chandraprakash_7852?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/Chandraprakash-Darji",
@@ -34,8 +34,8 @@ const teamData = [
     },
     {
         name: "Manan Dharia",
-        role: "Member",
-        data: "",
+        role: "Management",
+        data: "Developer | Software Analyst",
         social: {
             insta: "https://instagram.com/manan_dharia?igshid=YmMyMTA2M2Y=",
             github: "https://github.com/manandharia07",
