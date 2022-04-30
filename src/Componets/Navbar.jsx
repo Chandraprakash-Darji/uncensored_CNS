@@ -21,7 +21,7 @@ const Navbar = () => {
       ) : (
         ""
       )}
-      <header className="shadow-lg z-10 bg-white/50 backdrop-blur fixed w-screen top-0">
+      <header className="shadow-lg z-10 bg-gray-900/50 backdrop-blur fixed w-screen top-0 text-gray-50">
         <nav className="container mx-auto flex items-center justify-between px-6 py-2 sm:flex-wrap lg:flex-nowrap">
           <button className="mr-2 sm:hidden" onClick={handleMenuOpened}>
             <svg
