@@ -13,6 +13,8 @@ Project Name : UncensoredCNS<br>
 ##DEMO <br>
 <br>
 * use dhrumitpatel.jod as domain name <br>
+* <br>
+* https://uncensored-cns.vercel.app/
 <br>
 <br>
 ##USE<br><br>
