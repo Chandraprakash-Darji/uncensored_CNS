@@ -140,6 +140,7 @@ const RenderData = ({
   fetchedBalETH,
   fetchedBalMATIC,
 }) => {
+  console.log(fetchedTranscationETH);
   if (
     (fetchedTranscationMATIC,
     fetchedTranscationETH,
@@ -154,6 +155,7 @@ const RenderData = ({
             {fetchedTranscationMATIC.data.address}
           </span>
         </h2>
+        <br />
         <h2 className="inline-flex gap-2">
           <span>MATIC Coin Balance</span>
           <span className="font-bold">
@@ -167,6 +169,7 @@ const RenderData = ({
             {fetchedTranscationETH.data.address}
           </span>
         </h2>
+        <br />
         <h2 className="inline-flex gap-2">
           <span>Etherium Coin Balance</span>
           <span className="font-bold">
@@ -174,10 +177,104 @@ const RenderData = ({
           </span>
         </h2>
         <div className="my-5 border border-gray-50/30 " />
-        
+
+        <h2 className="font-bold mb-2 text-xl">
+          Last 10 transaction Over the Etherium Network
+        </h2>
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-400">
+            <thead className="text-xs  uppercase bg-gray-700 text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Transfered TO
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  txn Hash
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Amount
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Gas price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from(fetchedTranscationETH.data.items)
+                .slice(0, 10)
+                .map((item) => (
+                  <TrForTrams
+                    transaction={item}
+                    isETH={true}
+                    key={item.tx_hash}
+                  />
+                ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="my-5 border border-gray-50/30 " />
+
+        <h2 className="font-bold mb-2 text-xl">
+          Last 10 transaction Over the Polygon Network
+        </h2>
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-400">
+            <thead className="text-xs  uppercase bg-gray-700 text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Transfered TO
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  txn Hash
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Amount
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Gas price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from(fetchedTranscationMATIC.data.items)
+                .slice(0, 10)
+                .map((item) => (
+                  <TrForTrams
+                    transaction={item}
+                    isETH={false}
+                    key={item.tx_hash}
+                  />
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   else {
     return <h2 className="text-gray-50 text-3xl">Loading...</h2>;
   }
+};
+
+const TrForTrams = ({ transaction, isETH }) => {
+  return (
+    <tr className="border-b border-gray-700">
+      <th
+        scope="row"
+        className="px-6 py-4 font-medium text-white text-truncted "
+        title={transaction.to_address}
+      >
+        {transaction.to_address}
+      </th>
+      <td className="px-6 py-4 text-truncted " title={transaction.tx_hash}>
+        {transaction.tx_hash}
+      </td>
+      <td className="px-6 py-4">
+        {transaction.value * 0.00000000000000000001} {isETH ? "Ether" : "Matic"}
+      </td>
+      <td className="px-6 py-4">
+        {transaction.gas_price * 0.00000000000000000001}
+      </td>
+    </tr>
+  );
 };
