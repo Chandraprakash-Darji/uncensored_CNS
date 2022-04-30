@@ -195,7 +195,7 @@ const RenderData = ({
                   Amount
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Gas price
+                  Gas price (Gwei)
                 </th>
               </tr>
             </thead>
@@ -232,7 +232,7 @@ const RenderData = ({
                   Amount
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Gas price
+                  Gas price (Gwei)
                 </th>
               </tr>
             </thead>
@@ -272,9 +272,7 @@ const TrForTrams = ({ transaction, isETH }) => {
       <td className="px-6 py-4">
         {transaction.value * 0.00000000000000000001} {isETH ? "Ether" : "Matic"}
       </td>
-      <td className="px-6 py-4">
-        {transaction.gas_price * 0.00000000000000000001}
-      </td>
+      <td className="px-6 py-4">{transaction.gas_price}</td>
     </tr>
   );
 };
