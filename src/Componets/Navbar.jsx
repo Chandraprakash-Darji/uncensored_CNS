@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { polygonSvg } from "../assests/indexImg";
+import { polygonSvg } from "../assets/indexImg";
 import { BsPersonCheck } from "react-icons/bs";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -17,11 +17,11 @@ const Navbar = () => {
   return (
     <>
       {isMenuOpend ? (
-        <div className="absolute w-screen h-screen bg-black/50 backdrop-blur  top-0 left-0 z-0"></div>
+        <div className="absolute w-screen h-screen bg-black/70 backdrop-blur  top-0 left-0 z-0"></div>
       ) : (
         ""
       )}
-      <header className="shadow-lg relative z-10 bg-white">
+      <header className="shadow-lg z-10 bg-white/50 backdrop-blur fixed w-screen top-0">
         <nav className="container mx-auto flex items-center justify-between px-6 py-2 sm:flex-wrap lg:flex-nowrap">
           <button className="mr-2 sm:hidden" onClick={handleMenuOpened}>
             <svg
